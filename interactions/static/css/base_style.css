@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background: #143447;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    color: #EEF1F3;
+}

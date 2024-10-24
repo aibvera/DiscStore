@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Inicio</h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+
+<div class="main_wrapper">
+    <h1>Inicio</h1>
+</div>
 
 {% endblock %}

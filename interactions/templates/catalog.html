@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Catálogo</h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/catalog_style.css' %}">
+<script src="{% static 'js/catalog.js' %}"></script>
+
+<div class="main_wrapper">
+    <h1>Catálogo</h1>
+    <div class="catalog_wrapper" id="catalog_div"></div>
+</div>
 
 {% endblock %}
