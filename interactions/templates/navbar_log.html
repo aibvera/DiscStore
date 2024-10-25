@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar_style.css' %}">
+
+<div class="navbar_wrapper">
+    <div class="left_nav">
+        <img class="disc_img" src="{% static 'imgs/disc.png' %}">
+        <h1>Tienda de discos xd</h1>
+    </div>
+    <div class="right_nav">
+        <a href="{% url 'index' %}"><button class="nav_button">Inicio</button></a>
+        <a href="{% url 'catalog' %}"><button class="nav_button">Catálogo</button></a>
+        <form class="khe" method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button class="nav_button" type="submit">Cerrar sesión</button>
+        </form>
+    </div>
+</div>

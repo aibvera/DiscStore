@@ -1,0 +1,36 @@
+{% extends 'base.html' %}  <!--inherits meta data from base.html -->
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+
+<div class="main_wrapper">
+
+    <h1>Regístrate =|</h1>
+    
+    <form class="login_form" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="id_username">ID de Usuario:</label>
+            <input type="text" name="username" id="id_username" required>
+        </div>
+        <div>
+            <label for="id_email">Email:</label>
+            <input type="email" name="email" id="id_email" required>
+        </div>
+        <div>
+            <label for="id_password">Contraseña:</label>
+            <input type="password" name="password" id="id_password" required>
+        </div>
+        <div>
+            <label for="id_password_confirm">Confirmar Contraseña:</label>
+            <input type="password" name="password_confirm" id="id_password_confirm" required>
+        </div>
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <p>O <a href="{% url 'index' %}">logueate</a> wn</p>
+
+</div>
+
+{% endblock %}

@@ -124,3 +124,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Tiempo de duración de la sesión (en segundos):
+SESSION_COOKIE_AGE = 300  # 300 segundos = 5 minutos
+LOGIN_REDIRECT_URL = '/main/'  # Página a la que redirigir tras iniciar sesión
+LOGOUT_REDIRECT_URL = 'index'  # Página a la que redirigir tras cerrar sesión

@@ -8,7 +8,11 @@
     <title>DiscStore</title>
 </head>
 <body>
-    {% include 'navbar.html' %}
+    {% if user.is_authenticated %}
+        {% include 'navbar_log.html' %}
+    {% else %}
+        {% include 'navbar.html' %}
+    {% endif %}
     {% block content %}
     <!-- El contenido específico de cada página irá aquí -->
     {% endblock %}
