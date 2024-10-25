@@ -5,7 +5,24 @@
 <link rel="stylesheet" href="{% static 'css/index_style.css' %}">
 
 <div class="main_wrapper">
-    <h1>Inicio</h1>
+
+    <h1>Inicia sesión =|</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="id_username">Nombre de usuario:</label>
+            <input type="text" name="username" id="id_username">
+        </div>
+        <div>
+            <label for="id_password">Contraseña:</label>
+            <input type="password" name="password" id="id_password">
+        </div>
+        <button type="submit">Iniciar sesión</button>
+    </form>
+
+    <p>O <a href="{% url 'register' %}">regístrate</a> wn</p>
+
 </div>
 
 {% endblock %}
