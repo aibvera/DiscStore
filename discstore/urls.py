@@ -21,10 +21,10 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('main/', views.main, name='main'),
+    path('', views.catalog, name='index'),  # te manda al catálogo
+    path('login/', views.loginn, name='login'),
     path('register/', views.register, name='register'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('catalog/', views.catalog, name='catalog'),
+    path('account/', views.account, name='account'),
     path('albums/', views.get_albums, name='albums'),
 ]

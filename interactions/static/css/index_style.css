@@ -1,6 +1,30 @@
 .main_wrapper {
-    margin-left: 5px;
-    margin-right: 5px;
+    height: 90vh;
+    width: 100%;
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.catalog_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.album_container {
+    width: calc(33% - 15px);
+}
+
+.catalog_album {
     color: #EEF1F3;
 }
 
+.album_cover {
+    width: 95%;
+}
+
+.invisible {
+    display: none;
+}

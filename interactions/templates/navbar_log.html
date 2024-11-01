@@ -7,9 +7,9 @@
         <h1>Tienda de discos xd</h1>
     </div>
     <div class="right_nav">
-        <a href="{% url 'index' %}"><button class="nav_button">Inicio</button></a>
-        <a href="{% url 'catalog' %}"><button class="nav_button">Catálogo</button></a>
-        <form class="khe" method="post" action="{% url 'logout' %}">
+        <a href="{% url 'index' %}"><button class="nav_button">Catálogo</button></a>
+        <a href="{% url 'account' %}"><button class="nav_button">Cuenta</button></a>
+        <form class="logout_form" method="post" action="{% url 'logout' %}">
             {% csrf_token %}
             <button class="nav_button" type="submit">Cerrar sesión</button>
         </form>

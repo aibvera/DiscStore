@@ -3,26 +3,11 @@
 
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+<script src="{% static 'js/catalog.js' %}"></script>
 
 <div class="main_wrapper">
-
-    <h1>Inicia sesión =|</h1>
-
-    <form method="post">
-        {% csrf_token %}
-        <div>
-            <label for="id_username">Nombre de usuario:</label>
-            <input type="text" name="username" id="id_username">
-        </div>
-        <div>
-            <label for="id_password">Contraseña:</label>
-            <input type="password" name="password" id="id_password">
-        </div>
-        <button type="submit">Iniciar sesión</button>
-    </form>
-
-    <p>O <a href="{% url 'register' %}">regístrate</a> wn</p>
-
+    <h1>Catálogo</h1>
+    <div class="catalog_wrapper" id="catalog_div"></div>
 </div>
 
 {% endblock %}

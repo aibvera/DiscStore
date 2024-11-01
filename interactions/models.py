@@ -26,6 +26,7 @@ class Album(models.Model):
     ]
     Album_MainGenre = models.CharField(max_length=3, choices=genre_choices, default='roc')
     Album_Price = models.DecimalField(max_digits=6, decimal_places=2)
+    Album_Cover_Path = models.CharField(max_length=100, default='imgs/covers/mami.jpeg')
 
 class Order(models.Model):
     Id_Order = models.AutoField(primary_key=True)

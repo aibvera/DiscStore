@@ -17,6 +17,7 @@ const catalog = async() => {
             data.albums.forEach((album) => {
                 album_divs += `
                     <div class="album_container">
+                        <img src=${album.Album_Cover_Path} class="album_cover" alt="img">
                         <ul class="catalog_album">
                         <li>Album: ${album.Album_Name}</li>
                         <li>Artista: ${album.Id_Artist__Artist_Name}</li>
@@ -26,7 +27,7 @@ const catalog = async() => {
                     </div>
                 `
             });
-            catalog_div.innerHTML = album_divs;
+            catalog_div.insertAdjacentHTML('beforeend', album_divs);
             // Fin
 
         } else {
